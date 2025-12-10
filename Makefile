@@ -70,8 +70,8 @@ test-cov:
 	@echo "Coverage report generated in htmlcov/index.html"
 
 test-health:
-	@echo "Testing API health endpoint..."
-	@curl -s http://api.local.com:5000/health | python -m json.tool || echo "API not reachable. Make sure it's running with 'make run-api'"
+	@echo "Testing API health endpoint in localhost..."
+	@curl -s http://localhost:5000/health | python -m json.tool || echo "API not reachable. Make sure it's running with 'make run-api'"
 
 decode-token:
 	@if [ -z "$(TOKEN)" ]; then \
